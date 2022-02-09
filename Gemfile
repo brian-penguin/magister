@@ -7,7 +7,7 @@ ruby "3.1.0"
 gem "rails", "~> 7.0.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-# gem "sprockets-rails"
+gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -53,6 +53,9 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   # A default rubocop linter with no configuration options. See: https://github.com/testdouble/standard
   gem "standard"
+
+  # A drop in replacement for minitest (the default rails test suite)
+  gem "rspec-rails"
 end
 
 group :development do
