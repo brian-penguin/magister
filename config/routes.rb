@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root "pages#show", page: "home"
 
   # Handle Static pages
-  get "/pages/:page" => "pages#show"
+  get "/pages/*page" => "pages#show"
 end
