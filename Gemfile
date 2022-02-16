@@ -48,14 +48,20 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Clearance for managing user accounts and sign-in sign-out
+gem "clearance"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
   # A default rubocop linter with no configuration options. See: https://github.com/testdouble/standard
   gem "standard"
-
   # A drop in replacement for minitest (the default rails test suite)
   gem "rspec-rails"
+  # Simulate a user clicking around
+  gem "capybara"
+  # A gem for generating factories
+  gem "factory_bot_rails"
 end
 
 group :development do

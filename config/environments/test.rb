@@ -52,6 +52,10 @@ Rails.application.configure do
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 
+  # Set a backdoor to allow us to not have to do the whole login thing each time
+  # https://github.com/thoughtbot/clearance/
+  config.middleware.use Clearance::BackDoor
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
