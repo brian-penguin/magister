@@ -55,6 +55,9 @@ Rails.application.configure do
   # Set a backdoor to allow us to not have to do the whole login thing each time
   # https://github.com/thoughtbot/clearance/
   config.middleware.use Clearance::BackDoor
+  #
+  # Set mailer to localhost:3000
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
