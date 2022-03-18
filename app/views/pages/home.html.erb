@@ -73,7 +73,7 @@
       box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
       line-height: 360px;
       text-align: center;
-      font-size: 80px;
+      font-size: 120px;
     }
 
     .cubespinner .face1 {
@@ -116,17 +116,19 @@
   </style>
 
     <div class="flex flex-row-reverse">
-      <% if signed_in? %>
-        Signed in as: <%= current_user.email %>
-      <%= button_to "Sign out", sign_out_path, method: :delete %>
-      <% else %>
-        <%= link_to "Sign in", sign_in_path %>
-      <% end %>
+      <span class="font-gothic">
+        <% if signed_in? %>
+          Signed in as: <%= current_user.email %>
+        <%= button_to "Sign out", sign_out_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign in", sign_in_path %>
+        <% end %>
+      </span>
     </div>
   <div class="flex justify-center items-center h-screen z-50">
     <div class="flex-row object-scale-down">
       <div class="stage" style="width: 360px; height: 360px;">
-        <div class="cubespinner">
+        <div class="cubespinner font-gothic">
           <div class="face1">Iguana</div>
           <div class="face2">Helium</div>
           <div class="face3">Cube</div>
