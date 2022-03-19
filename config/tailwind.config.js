@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        gothic: ['"bu Gothic Hybrid"'],
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
