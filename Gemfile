@@ -51,6 +51,9 @@ gem "bootsnap", require: false
 # Clearance for managing user accounts and sign-in sign-out
 gem "clearance"
 
+# Add tailwindcss to the Rails asset pipeline
+gem "tailwindcss-rails", "~> 2.0"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
@@ -71,8 +74,6 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler"
 
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "annotate"
 end
 
-gem "tailwindcss-rails", "~> 2.0"

@@ -1,0 +1,13 @@
+<div class="flex flex-center container m-4 px-8">
+  <ul>
+    <% @organizations.each do |organization| %>
+      <li>
+        <div class="flex-col justify-items-stretch">
+          <div class="flex-auto basis-3">
+            <span class="font-4xl font-gothic"> <%= organization.name %></span>
+          </div>
+        </div>
+      </li>
+      <% end %>
+  </ul>
+</div>
