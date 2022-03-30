@@ -36,3 +36,6 @@
 
 # Ignore the scratch dir
 scratch/*
+
+# Support for custom /.gitconfig files
+/.gitconfig
