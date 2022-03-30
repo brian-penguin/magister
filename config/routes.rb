@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   # Handle Static pages
   get "/pages/*page" => "pages#show"
+
+  resources :collections
 end
